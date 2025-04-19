@@ -596,13 +596,15 @@ class ChemistryTaskGenerator:
         title_run.bold = True
         title_run.font.size = Pt(14)
         title_para.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+
         # устанавливаем стили заголовков TNR 12 black 
-        for i in range(1, 10):  # Heading 2 through Heading 9
+        for i in range(1, 10):  # Heading 1 through Heading 9
             heading_style = doc.styles[f'Heading {i}']
             heading_style.font.name = 'Times New Roman'
             heading_style.font.size = Pt(12)
             heading_style.font.color.rgb = RGBColor(0, 0, 0)
             heading_style.font.bold = True
+            
         # Проверяем, что у нас есть задачи для добавления
         if self.tasks:  # Проверка, что список tasks не пустой
             # Добавление задач
